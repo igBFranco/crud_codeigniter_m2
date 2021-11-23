@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class FuncionarioModel extends Model
+class EquipeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'funcionario';
+    protected $table            = 'equipe';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -15,11 +15,10 @@ class FuncionarioModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nome',
-        'email',
-        'telefone',
-        'salario',
-        'departamento_id',
+        'projeto_id',
+        'funcionario_id',
+        'data_inicio',
+        'horas_trabalhadas',
         'created_at',
         'updated_at',
     ];

@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Funcionario');
+$routes->setDefaultController('Departamento');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,7 +31,10 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Funcionario::index');
+$routes->get('/departamentos', 'Departamento::index');
+$routes->get('/funcionarios', 'Funcionario::index');
+$routes->get('/equipes', 'Equipe::index');
+$routes->get('/projetos', 'Projeto::index');
 
 /*
  * --------------------------------------------------------------------
