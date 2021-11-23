@@ -19,7 +19,7 @@
 <header>
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #812DCF;">
             <a class="navbar-brand" href="#">
-                <img src="https://cdn-icons.flaticon.com/png/512/1056/premium/1056665.png?token=exp=1637590483~hmac=0551a174af4b082db3d784b5974aebe6" width="40" height="40" alt="">
+                <img src="https://user-images.githubusercontent.com/88065589/143140590-b2d2c5dc-2c70-42f6-8948-c19bac4d7e92.png" width="40" height="40" alt="">
             </a>
             <a class="navbar-brand" href="#">
                 <i class="fa fa-book-open"></i>
