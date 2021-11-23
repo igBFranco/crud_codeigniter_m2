@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# CRUD CodeIgniter 4 - Atividade M2 Desenvolvimento Web II
 
 ## Como Instalar e Clonar o Projeto
 
@@ -8,9 +8,12 @@ Cria o projeto com o comando:
 Após criar o projeto roda o comando:
 `composer update`
 
+Faz o Clone do Projeto com o comando: 
+`git clone https://github.com/igBFranco/crud_codeigniter_m2.git`
+
 Renomeia o arquivo `env` para `.env` e altera a linha `# CI_ENVIRONMENT = production` para `CI_ENVIRONMENT = development`
 
-Tira o comentário(#) das linhas de database e altera para dos dados do seu banco de dados:
+Tira o comentário(#) das linhas de database e altera com os dados do seu banco de dados:
 
 `database.default.hostname = localhost`
 
@@ -24,15 +27,12 @@ Tira o comentário(#) das linhas de database e altera para dos dados do seu banc
 
 Após Configurar o Banco de Dados, roda o comando `php spark migrate `
 
+Para Rodar o Projeto no Servidor e testar utilize o comando:
+`php spark serve`
 
-## Repository Management
+## Imagem
+![img](https://user-images.githubusercontent.com/88065589/143123389-52a8ee55-2379-48cb-a461-74f37908124a.png)
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
 
 ## Server Requirements
 
