@@ -103,9 +103,11 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-header text-align-center">
-                <h3>Página Inicial</h3>
-                <button type="button" class="btn btn-primary btn-lg ">Block level button</button>
-                <button type="button" class="btn btn-secondary btn-lg ">Block level button</button>
+                <?php echo anchor(base_url('funcionario'), 'Funcionários', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
+                <?php echo anchor(base_url('departamento'), 'Departamentos', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
+                <br>
+                <?php echo anchor(base_url('equipe'), 'Equipes', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
+                <?php echo anchor(base_url('projeto'), 'Projetos', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
             </div>
         </div>
     </div>
