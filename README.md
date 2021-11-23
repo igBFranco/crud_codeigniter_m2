@@ -11,15 +11,16 @@ Após criar o projeto roda o comando:
 Renomeia o arquivo `env` para `.env` e altera a linha `# CI_ENVIRONMENT = production` para `CI_ENVIRONMENT = development`
 
 Tira o comentário(#) das linhas de database e altera para dos dados do seu banco de dados:
-`database.default.hostname = localhost
 
-database.default.database = nome_do_banco
+`database.default.hostname = localhost`
 
-database.default.username = root
+`database.default.database = nome_do_banco`
 
-database.default.password = pswd
+`database.default.username = root`
 
-database.default.DBDriver = MySQLi`
+`database.default.password = pswd`
+
+`database.default.DBDriver = MySQLi`
 
 Após Configurar o Banco de Dados, roda o comando `php spark migrate `
 
