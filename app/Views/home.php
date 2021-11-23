@@ -35,65 +35,25 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="welcome_message.php">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/funcionarios" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/funcionarios" role="button">
                             Funcionários
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="funcionario">
-                                <i class="fas fa-user-tie"></i>
-                                Funcionários
-                            </a>
-                            <a class="dropdown-item" href="funcionario/create">
-                                <i class="fas fa-store-alt"></i>
-                                Novo Funcionário
-                            </a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/departamentos" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/departamentos" role="button">
                             Departamentos
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-user-tie"></i>
-                                
-                            </a>
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-store-alt"></i>
-                                Novo 
-                            </a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/equipes" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/equipes"role="button">
                             Equipes
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-user-tie"></i>
-                                
-                            </a>
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-store-alt"></i>
-                                
-                            </a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/projetos" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projetos" >
                             Projetos
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-user-tie"></i>
-                                
-                            </a>
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-store-alt"></i>
-                                
-                            </a>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -105,7 +65,6 @@
             <div class="card-header text-align-center">
                 <?php echo anchor(base_url('funcionario'), 'Funcionários', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
                 <?php echo anchor(base_url('departamento'), 'Departamentos', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
-                <br>
                 <?php echo anchor(base_url('equipe'), 'Equipes', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
                 <?php echo anchor(base_url('projeto'), 'Projetos', ['class' => 'btn btn-warning mb-3 justify-content-center btn-lg btn-block']) ?>
             </div>
