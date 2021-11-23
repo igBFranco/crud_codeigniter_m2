@@ -90,39 +90,27 @@
                 </ul>
             </div>
         </nav>
-    </header>  
+    </header>    
     <div class="container mt-5">
 
-        <?php echo form_open('funcionario/store') ?>
+        <?php echo form_open('projeto/store') ?>
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" value="<?php echo isset($funcionario['nome']) ? $funcionario['nome'] : '' ?>" name="nome" id="nome" class="form-control">
+                <input type="text" value="<?php echo isset($projeto['nome']) ? $projeto['nome'] : '' ?>" name="nome" id="nome" class="form-control">
             </div>
             <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" value="<?php echo isset($funcionario['email']) ? $funcionario['email'] : '' ?>" name="email" id="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone</label>
-                <input type="text" value="<?php echo isset($funcionario['telefone']) ? $funcionario['telefone'] : '' ?>" name="telefone" id="telefone" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="salario">Salario</label>
-                <input type="text" value="<?php echo isset($funcionario['salario']) ? $funcionario['salario'] : '' ?>" name="salario" id="salario" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="departamento_id">Departamento</label>
-                <input type="select" value="<?php echo isset($funcionario['departamento_id']) ? $funcionario['departamento_id'] : '' ?>" name="departamento_id" id="departamento_id" class="form-control">
+                <label for="orcamento">Orçamento</label>
+                <input type="text" value="<?php echo isset($projeto['orcamento']) ? $projeto['orcamento'] : '' ?>" name="orcamento" id="orcamento" class="form-control">
             </div>
             <div class="row justify-content-end">
                 <div class="col-1">
-                    <a href="/funcionarios" class="btn btn-secondary">Voltar</a>
+                    <a href="/projetos" class="btn btn-secondary">Voltar</a>
                 </div>
                 <div class="col-1">
                     <input type="submit" value="Salvar" class="btn btn-primary">
                 </div>
             </div>
-            <input type="hidden" name="id" value="<?php echo isset($funcionario['id']) ? $funcionario['id'] : '' ?>">
+            <input type="hidden" name="id" value="<?php echo isset($projeto['id']) ? $projeto['id'] : '' ?>">
         <?php echo form_close(); ?>
 
     </div>

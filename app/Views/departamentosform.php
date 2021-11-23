@@ -28,7 +28,7 @@
                         <a class="nav-link" href="welcome_message.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/funcionarios" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Funcionários
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,17 +43,47 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Departamento
+                        <a class="nav-link dropdown-toggle" href="/departamentos" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Departamentos
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="departamentos">
+                            <a class="dropdown-item" href="">
                                 <i class="fas fa-user-tie"></i>
-                                Funcionários
+                                
                             </a>
-                            <a class="dropdown-item" href="funcionario/create">
+                            <a class="dropdown-item" href="">
                                 <i class="fas fa-store-alt"></i>
-                                Novo Funcionário
+                                Novo 
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/equipes" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Equipes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">
+                                <i class="fas fa-user-tie"></i>
+                                
+                            </a>
+                            <a class="dropdown-item" href="">
+                                <i class="fas fa-store-alt"></i>
+                                
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/projetos" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projetos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">
+                                <i class="fas fa-user-tie"></i>
+                                
+                            </a>
+                            <a class="dropdown-item" href="">
+                                <i class="fas fa-store-alt"></i>
+                                
                             </a>
                         </div>
                     </li>
@@ -72,8 +102,14 @@
                 <label for="setor">Setor</label>
                 <input type="text" value="<?php echo isset($departamento['setor']) ? $departamento['setor'] : '' ?>" name="setor" id="setor" class="form-control">
             </div>
-            
-            <input type="submit" value="Salvar" class="btn btn-primary">
+            <div class="row justify-content-end">
+                <div class="col-1">
+                    <a href="/departamentos" class="btn btn-secondary">Voltar</a>
+                </div>
+                <div class="col-1">
+                    <input type="submit" value="Salvar" class="btn btn-primary">
+                </div>
+            </div>
             <input type="hidden" name="id" value="<?php echo isset($departamento['id']) ? $departamento['id'] : '' ?>">
         <?php echo form_close(); ?>
 

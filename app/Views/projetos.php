@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Edição</title>
+    <title>Projetos</title>
+    <script>
+        function confirma(){
+            if(!confirm("Deseja realmente excluir o registro?")){
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -90,41 +98,34 @@
                 </ul>
             </div>
         </nav>
-    </header>  
+    </header>    
+
     <div class="container mt-5">
-
-        <?php echo form_open('funcionario/store') ?>
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" value="<?php echo isset($funcionario['nome']) ? $funcionario['nome'] : '' ?>" name="nome" id="nome" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" value="<?php echo isset($funcionario['email']) ? $funcionario['email'] : '' ?>" name="email" id="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone</label>
-                <input type="text" value="<?php echo isset($funcionario['telefone']) ? $funcionario['telefone'] : '' ?>" name="telefone" id="telefone" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="salario">Salario</label>
-                <input type="text" value="<?php echo isset($funcionario['salario']) ? $funcionario['salario'] : '' ?>" name="salario" id="salario" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="departamento_id">Departamento</label>
-                <input type="select" value="<?php echo isset($funcionario['departamento_id']) ? $funcionario['departamento_id'] : '' ?>" name="departamento_id" id="departamento_id" class="form-control">
-            </div>
-            <div class="row justify-content-end">
-                <div class="col-1">
-                    <a href="/funcionarios" class="btn btn-secondary">Voltar</a>
-                </div>
-                <div class="col-1">
-                    <input type="submit" value="Salvar" class="btn btn-primary">
-                </div>
-            </div>
-            <input type="hidden" name="id" value="<?php echo isset($funcionario['id']) ? $funcionario['id'] : '' ?>">
-        <?php echo form_close(); ?>
-
+    <?php echo anchor(base_url('projeto/create'), 'Novo Projeto', ['class' => 'btn btn-secondary mb-3 justify-content-center']) ?>
+        <table class="table table-hover table-striped table-bordered" style="text-align:center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Orçamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($projetos as $projeto): ?>
+                <tr>
+                    <td><?php echo $projeto['id'] ?></td>
+                    <td><?php echo $projeto['nome'] ?></td>
+                    <td>R$ <?php echo $projeto['orcamento'] ?></td>
+                    <td>
+                        <?php echo anchor('projeto/edit/' . $projeto['id'], 'Editar', ['class' => 'btn btn-info mb-3']) ?>
+                        <?php echo anchor('projeto/delete/' . $projeto['id'], 'Excluir', ['class' => 'btn btn-danger mb-3', 'onclick' => 'return confirma()']) ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
+
 </body>
 </html>
