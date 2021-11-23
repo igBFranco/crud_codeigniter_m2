@@ -1,52 +1,38 @@
-# CodeIgniter 4 Application Starter
+# CRUD CodeIgniter 4 - Atividade M2 Desenvolvimento Web II
 
-## What is CodeIgniter?
+## Como Instalar e Clonar o Projeto
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+Cria o projeto com o comando:
+`composer create-project codeigniter4/appstarter crud_codeigniter_m2` 
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Após criar o projeto roda o comando:
+`composer update`
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Faz o Clone do Projeto com o comando: 
+`git clone https://github.com/igBFranco/crud_codeigniter_m2.git`
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Renomeia o arquivo `env` para `.env` e altera a linha `# CI_ENVIRONMENT = production` para `CI_ENVIRONMENT = development`
 
-## Installation & updates
+Tira o comentário(#) das linhas de database e altera com os dados do seu banco de dados:
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+`database.default.hostname = localhost`
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+`database.default.database = nome_do_banco`
 
-## Setup
+`database.default.username = root`
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+`database.default.password = pswd`
 
-## Important Change with index.php
+`database.default.DBDriver = MySQLi`
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Após Configurar o Banco de Dados, roda o comando `php spark migrate `
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Para Rodar o Projeto no Servidor e testar utilize o comando:
+`php spark serve`
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Imagem
+![img](https://user-images.githubusercontent.com/88065589/143123389-52a8ee55-2379-48cb-a461-74f37908124a.png)
 
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
 
 ## Server Requirements
 
